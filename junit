@@ -1,0 +1,41 @@
+### JUnit 5 - Notes de Formation  
+
+#### **Introduction**  
+JUnit 5 est un framework de test pour Java qui améliore la modularité et la flexibilité des tests unitaires. Il est composé de trois parties : **JUnit Platform**, **JUnit Jupiter** et **JUnit Vintage**.
+
+#### **Installation & Configuration**  
+- **Maven** : Ajouter les dépendances dans `pom.xml`.  
+- **Gradle** : Déclarer les dépendances dans `build.gradle`.  
+- **Configuration** : Définition des paramètres globaux et des runners de test.
+
+#### **Écriture des Tests**  
+- **Définition des tests** : `@Test` pour créer un test unitaire.  
+- **Assertions** : `assertEquals`, `assertTrue`, `assertThrows`, etc.  
+- **Tests paramétrés** : `@ParameterizedTest` pour exécuter plusieurs cas de test avec `@ValueSource`.
+
+#### **Cycle de Vie des Tests**  
+- **Avant/après chaque test** :  
+  - `@BeforeEach` : Exécuté avant chaque test.  
+  - `@AfterEach` : Exécuté après chaque test.  
+- **Avant/après tous les tests** :  
+  - `@BeforeAll` : Initialisation globale.  
+  - `@AfterAll` : Nettoyage global.  
+- **Désactiver un test** : `@Disabled` pour ignorer un test temporairement.
+
+#### **Exécution des Tests**  
+- **Via un IDE** : IntelliJ IDEA, Eclipse, VS Code.  
+- **Maven** : `mvn test`  
+- **Gradle** : `gradle test`  
+
+#### **Concepts Avancés**  
+- **Mockito** : Création de mocks pour tester des composants isolés.  
+- **Tests d’exceptions** : Vérification des erreurs avec `assertThrows`.  
+- **Tests conditionnels** : `@EnabledIf`, `@DisabledIf` pour exécuter ou ignorer des tests selon des conditions.
+
+#### **Bonnes Pratiques**  
+- Structurer les tests clairement.  
+- Séparer les tests unitaires et d’intégration.  
+- Automatiser les tests avec CI/CD.  
+- Rédiger des assertions explicites pour chaque cas de test.
+
+

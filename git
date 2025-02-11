@@ -1,0 +1,39 @@
+Résumé de la formation Git :  
+### **Introduction à Git**  
+Git est un système de gestion de version distribué qui permet aux développeurs de suivre les modifications du code et de collaborer efficacement.  
+
+### **Les bases de Git**  
+- **Installation de Git** : Configuration initiale de Git sur votre machine.  
+- **Configuration de Git** : Définition du nom d’utilisateur et de l’e-mail avec `git config`.  
+- **Créer un dépôt Git** : Utilisation de `git init` pour initialiser un dépôt.  
+- **Cloner un dépôt** : Copier un dépôt existant avec `git clone`.  
+
+### **Travailler avec Git**  
+- **Ajout et validation des modifications** :  
+  - `git add` pour ajouter des fichiers à l’index.  
+  - `git commit -m "Message"` pour enregistrer les modifications.  
+- **Vérifier l’état du dépôt** : `git status` pour voir les fichiers modifiés et en attente.  
+- **Historique des modifications** : `git log` pour afficher les commits précédents.  
+
+### **Gestion des branches**  
+- **Créer une branche** : `git branch nom-branche`.  
+- **Basculer entre branches** : `git checkout nom-branche` ou `git switch nom-branche`.  
+- **Fusionner des branches** : `git merge nom-branche`.  
+- **Résolution de conflits** : Gestion des conflits lorsque deux branches ont des modifications incompatibles.  
+
+### **Travailler avec des dépôts distants**  
+- **Ajouter un dépôt distant** : `git remote add origin URL`.  
+- **Envoyer des modifications** : `git push origin branche`.  
+- **Récupérer des mises à jour** : `git pull origin branche`.  
+
+### **Autres concepts avancés**  
+- **Rebasing (`git rebase`)** : Réorganiser l’historique des commits pour une meilleure lisibilité.  
+- **Cherry-picking (`git cherry-pick`)** : Appliquer un commit spécifique d’une branche à une autre.  
+- **Stash (`git stash`)** : Sauvegarder temporairement des modifications non validées.  
+
+### **Bonnes pratiques Git**  
+- Écrire des messages de commit clairs.  
+- Travailler avec des branches pour séparer les fonctionnalités.  
+- Vérifier l’historique avant de fusionner (`git log`).  
+- Résoudre les conflits avec attention.  
+
