@@ -1,0 +1,69 @@
+ **"Spring Boot Microservices Level 1: Communication and Discovery"** :
+
+---
+
+**Résumé de la formation Spring Boot Microservices :**  
+
+### **Introduction aux microservices**  
+Les microservices sont une architecture logicielle qui divise une application en petits services indépendants, chacun exécutant un processus unique. Cette approche permet une meilleure modularité, évolutivité et facilité de maintenance par rapport aux architectures monolithiques.  
+
+---
+
+### **Les bases des microservices avec Spring Boot**  
+- **Création d’un microservice** : Utilisation de **Spring Boot** pour développer des services légers et autonomes.  
+- **Dépendances nécessaires** : Ajout de modules comme **Spring Web** pour les API REST et **Spring Cloud** pour les fonctionnalités avancées.  
+- **Configuration de base** : Définition des propriétés dans `application.properties` ou `application.yml`.  
+
+---
+
+### **Communication entre microservices**  
+- **Communication synchrone** : Utilisation de **RESTful APIs** pour permettre aux services de communiquer via HTTP.  
+  - **Spring RestTemplate** ou **WebClient** pour envoyer des requêtes entre services.  
+  - Exemple : Un service A appelle un service B pour récupérer des données.  
+- **Communication asynchrone** : Introduction à des outils comme **Kafka** ou **RabbitMQ** pour les échanges de messages.  
+
+---
+
+### **Découverte de services avec Spring Cloud Netflix Eureka**  
+- **Service Discovery** : Mécanisme permettant à un service de se localiser dynamiquement dans un environnement distribué.  
+  - **Eureka Server** : Un registre central où les services s’enregistrent.  
+  - **Eureka Client** : Les microservices qui s’enregistrent auprès du serveur Eureka.  
+- **Avantages** : Simplifie la gestion des adresses IP et des ports, surtout dans des environnements cloud.  
+
+---
+
+### **Mise en pratique**  
+1. **Création de deux microservices** :  
+   - Un service pour gérer les utilisateurs.  
+   - Un service pour gérer les commandes.  
+2. **Communication REST** : Le service commandes appelle le service utilisateurs pour récupérer des informations.  
+3. **Intégration de Eureka** :  
+   - Configuration d’un serveur Eureka.  
+   - Enregistrement des microservices en tant que clients Eureka.  
+
+---
+
+### **Gestion des erreurs et résilience**  
+- **Hystrix** ou **Resilience4j** : Pour gérer les pannes et éviter la propagation des erreurs (circuit breaker).  
+- **Fallback mechanisms** : Fournir des réponses alternatives en cas d’échec d’un service.  
+
+---
+
+### **Bonnes pratiques pour les microservices**  
+- **Séparation des responsabilités** : Chaque service doit avoir une fonctionnalité spécifique.  
+- **Sécurisation des communications** : Utilisation de HTTPS et de tokens d’authentification.  
+- **Surveillance et logging** : Centraliser les logs pour faciliter le débogage dans un environnement distribué.  
+- **Tests automatisés** : Assurer la fiabilité des services avec des tests unitaires et d’intégration.  
+
+---
+
+### **Outils et technologies complémentaires**  
+- **Spring Cloud Gateway** : Pour gérer les routes et les requêtes entrantes.  
+- **Config Server** : Centralisation de la configuration des microservices.  
+- **Docker et Kubernetes** : Pour le déploiement et l’orchestration des services.  
+
+---
+
+Ce cours offre une excellente introduction à la création et à la gestion de microservices avec Spring Boot, en mettant l’accent sur la communication et la découverte de services. Il est idéal pour les développeurs qui souhaitent passer d’une architecture monolithique à une architecture microservices.  
+
+--- 
