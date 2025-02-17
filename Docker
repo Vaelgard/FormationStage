@@ -1,0 +1,63 @@
+### **Introduction et installation**  
+- **`docker --version`** : Affiche la version installée de Docker.  
+- **`docker info`** : Affiche les informations système Docker, y compris les conteneurs et les images.  
+
+---
+
+### **Gestion des conteneurs**  
+- **`docker run <image>`** : Lance un conteneur à partir d'une image Docker.  
+- **`docker ps`** : Affiche les conteneurs en cours d'exécution.  
+- **`docker ps -a`** : Affiche tous les conteneurs (en cours ou arrêtés).  
+- **`docker stop <container_id>`** : Arrête un conteneur en cours d'exécution.  
+- **`docker start <container_id>`** : Démarre un conteneur arrêté.  
+- **`docker restart <container_id>`** : Redémarre un conteneur.  
+- **`docker exec -it <container_id> <command>`** : Exécute une commande dans un conteneur en cours d'exécution.  
+- **`docker rm <container_id>`** : Supprime un conteneur arrêté.  
+- **`docker logs <container_id>`** : Affiche les logs d'un conteneur.  
+- **`docker inspect <container_id>`** : Affiche les détails d'un conteneur.  
+
+---
+
+### **Gestion des images**  
+- **`docker images`** : Liste les images disponibles localement.  
+- **`docker pull <image>`** : Télécharge une image depuis un registre.  
+- **`docker build -t <image_name>:<tag> <context_path>`** : Crée une image à partir d'un Dockerfile.  
+- **`docker rmi <image_id>`** : Supprime une image locale.  
+
+---
+
+### **Volumes Docker**  
+- **`docker volume create <volume_name>`** : Crée un volume Docker.  
+- **`docker volume ls`** : Liste les volumes existants.  
+- **`docker volume inspect <volume_name>`** : Affiche les détails d'un volume.  
+- **`docker volume rm <volume_name>`** : Supprime un volume Docker.  
+
+---
+
+### **Dockerfile et pratiques de création d'images**  
+- **`docker build -t <tag> .`** : Crée une image à partir d'un Dockerfile dans le répertoire courant.  
+- **`.dockerignore`** : Fichier utilisé pour ignorer des fichiers ou répertoires lors de la création d'une image.
+
+---
+
+### **Gestion des tags et versions**  
+- **`docker tag <image_id> <new_tag>`** : Crée un tag pour une image existante.  
+- **`docker run <image>:<tag>`** : Exécute un conteneur avec une image taguée spécifiquement.  
+
+---
+
+### **Registre Docker**  
+- **`docker login`** : Se connecte à Docker Hub.  
+- **`docker push <image>`** : Envoie une image vers un registre Docker (par exemple, Docker Hub).  
+- **`docker pull <image>`** : Télécharge une image depuis un registre Docker.  
+
+---
+
+### **Débogage des conteneurs**  
+- **`docker logs <container_id>`** : Consulte les logs d'un conteneur pour déboguer.  
+- **`docker exec -it <container_id> /bin/bash`** : Accède à un terminal interactif dans un conteneur en cours d'exécution.  
+
+---
+
+### **Résumé**  
+Les commandes Docker abordées dans ce tutoriel couvrent tous les aspects de base pour travailler avec des conteneurs, des images, des volumes, et des réseaux. Ces commandes permettent une gestion efficace des environnements Docker, que ce soit pour développer, déployer, ou déboguer des applications.
