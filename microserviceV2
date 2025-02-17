@@ -1,0 +1,64 @@
+### **Résumé de la formation Spring Boot Microservices Level 2 : Fault Tolerance and Resilience**  
+
+---
+
+### **Introduction à la tolérance aux pannes et à la résilience**  
+Ce cours se concentre sur les techniques pour rendre les microservices résilients et capables de gérer les erreurs sans affecter l'ensemble du système.  
+
+---
+
+### **Les défis des microservices**  
+- **Dépendances entre services** : Un service défaillant peut impacter d'autres services.  
+- **Latence et temps d'attente** : Gestion des retards dans les communications entre services.  
+- **Propagation des erreurs** : Une panne peut se propager rapidement dans un système distribué.  
+
+---
+
+### **Techniques de tolérance aux pannes**  
+1. **Circuit Breaker (Disjoncteur)** :  
+   - **Objectif** : Empêcher les appels répétés à un service défaillant.  
+   - **Implémentation** : Utilisation de **Hystrix**.  
+   - **Fonctionnement** :  
+     - Si un service échoue plusieurs fois, le circuit s'ouvre et les appels suivants sont bloqués temporairement.  
+     - Après un délai, le circuit se referme pour réessayer.  
+
+2. **Fallback Mechanisms (Mécanismes de secours)** :  
+   - **Objectif** : Fournir une réponse alternative en cas d'échec d'un service.  
+   - **Exemple** : Retourner une valeur par défaut ou un message d'erreur personnalisé.  
+
+3. **Retry Mechanism (Réessai)** :  
+   - **Objectif** : Réessayer automatiquement un appel en cas d'échec temporaire.  
+   - **Configuration** : Nombre de tentatives et délai entre les réessais.  
+
+4. **Bulkhead (Cloisonnement)** :  
+   - **Objectif** : Isoler les ressources pour éviter qu'une panne dans un service affecte les autres.  
+   - **Exemple** : Limiter le nombre de threads ou de connexions pour un service spécifique.  
+
+---
+
+### **Mise en pratique avec Spring Boot**  
+1. **Configuration de Resilience4j** :  
+   - Ajout des dépendances nécessaires dans `pom.xml` ou `build.gradle`.  
+   - Configuration des propriétés dans `application.yml` (ex : nombre de réessais, délai de timeout).  
+
+2. **Exemple de Circuit Breaker** :  
+   - Un service A appelle un service B.  
+   - Si le service B échoue, le circuit s'ouvre et un fallback est déclenché.  
+
+3. **Exemple de Retry** :  
+   - Un service réessaie automatiquement un appel après un échec temporaire (ex : problème de réseau).  
+
+4. **Exemple de Bulkhead** :  
+   - Limitation des appels simultanés à un service pour éviter la surcharge.  
+
+---
+
+### **Bonnes pratiques pour la résilience**  
+- **Limiter les dépendances** : Réduire les appels synchrones entre services.  
+- **Utiliser des timeouts** : Éviter les attentes infinies lors des appels de services.  
+- **Tester les scénarios d'échec** : Simuler des pannes pour vérifier la résilience du système.  
+
+---
+
+### **Outils et technologies complémentaires**  
+- **Spring Cloud Gateway** : Pour gérer les routes et les requêtes entrantes.  

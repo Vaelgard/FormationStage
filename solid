@@ -1,0 +1,21 @@
+### **Introduction aux principes SOLID**  
+Les principes SOLID sont des concepts fondamentaux de la programmation orientée objet qui favorisent la conception de logiciels modulaire et maintenable. L'acronyme SOLID représente cinq principes : **Single Responsibility**, **Open-Closed**, **Liskov Substitution**, **Interface Segregation**, et **Dependency Inversion**.
+
+---
+
+### **Principes SOLID**  
+1. **Single Responsibility Principle (SRP)** :  
+   Chaque classe doit avoir une seule responsabilité, ce qui simplifie la maintenance.  
+2. **Open-Closed Principle (OCP)** :  
+   Les entités logicielles doivent être ouvertes à l'extension, mais fermées à la modification.  
+3. **Liskov Substitution Principle (LSP)** :  
+   Les objets d'une classe dérivée doivent pouvoir remplacer ceux de la classe de base sans altérer le comportement du programme.  
+4. **Interface Segregation Principle (ISP)** :  
+   Les clients ne doivent pas être obligés d'implémenter des interfaces qu'ils n'utilisent pas.  
+5. **Dependency Inversion Principle (DIP)** :  
+   Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau, mais des abstractions.
+
+---
+
+### **Avantages des principes SOLID**  
+L'application des principes SOLID permet d'éviter la rigidité et la fragilité dans le code, tout en favorisant la réutilisabilité et la facilité de maintenance, ce qui est essentiel pour la création de logiciels évolutifs et de qualité.

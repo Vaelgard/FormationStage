@@ -20,8 +20,6 @@ Les microservices sont une architecture logicielle qui divise une application en
 - **Communication synchrone** : Utilisation de **RESTful APIs** pour permettre aux services de communiquer via HTTP.  
   - **Spring RestTemplate** ou **WebClient** pour envoyer des requêtes entre services.  
   - Exemple : Un service A appelle un service B pour récupérer des données.  
-- **Communication asynchrone** : Introduction à des outils comme **Kafka** ou **RabbitMQ** pour les échanges de messages.  
-
 ---
 
 ### **Découverte de services avec Spring Cloud Netflix Eureka**  
@@ -43,23 +41,9 @@ Les microservices sont une architecture logicielle qui divise une application en
 
 ---
 
-### **Gestion des erreurs et résilience**  
-- **Hystrix** ou **Resilience4j** : Pour gérer les pannes et éviter la propagation des erreurs (circuit breaker).  
-- **Fallback mechanisms** : Fournir des réponses alternatives en cas d’échec d’un service.  
-
----
-
-### **Bonnes pratiques pour les microservices**  
-- **Séparation des responsabilités** : Chaque service doit avoir une fonctionnalité spécifique.  
-- **Sécurisation des communications** : Utilisation de HTTPS et de tokens d’authentification.  
-- **Surveillance et logging** : Centraliser les logs pour faciliter le débogage dans un environnement distribué.  
-- **Tests automatisés** : Assurer la fiabilité des services avec des tests unitaires et d’intégration.  
-
----
 
 ### **Outils et technologies complémentaires**  
-- **Spring Cloud Gateway** : Pour gérer les routes et les requêtes entrantes.  
-- **Config Server** : Centralisation de la configuration des microservices.  
+- **Spring Cloud Gateway** : Pour gérer les routes et les requêtes entrantes.   
 - **Docker et Kubernetes** : Pour le déploiement et l’orchestration des services.  
 
 ---

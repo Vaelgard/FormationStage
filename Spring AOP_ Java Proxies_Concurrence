@@ -1,0 +1,49 @@
+### **Résumé condensé : Spring AOP, Java Proxies et Concurrence**  
+
+---
+
+### **Spring AOP (Aspect-Oriented Programming)**  
+- **Objectif** : Séparer les préoccupations transversales (logs, sécurité, transactions) du code métier.  
+- **Concepts clés** :  
+  - **Aspect** : Module pour une fonctionnalité transversale.  
+  - **Advice** : Action exécutée avant/après/autour d'une méthode (`@Before`, `@After`, `@Around`).  
+  - **Pointcut** : Expression pour cibler où appliquer un advice (ex : `execution(* com.example.*.*(..))`).  
+- **Annotations personnalisées** :  
+  - Créer une annotation avec `@interface` et l'utiliser pour marquer des méthodes.  
+  - Exemple : `@LogExecutionTime` pour mesurer le temps d'exécution.  
+
+---
+
+### **Java Dynamic Proxies**  
+- **Objectif** : Intercepter les appels de méthodes pour ajouter des fonctionnalités (comme AOP).  
+- **Implémentation** :  
+  - Utiliser `java.lang.reflect.Proxy` pour créer un proxy dynamique.  
+  - Exemple :  
+    ```java
+    MyInterface proxy = (MyInterface) Proxy.newProxyInstance(
+        MyInterface.class.getClassLoader(),
+        new Class<?>[] { MyInterface.class },
+        new MyInvocationHandler()
+    );
+    ```  
+
+---
+
+### **Java Concurrency**  
+- **Concepts de base** :  
+  - **Thread** : Unité d'exécution indépendante.  
+  - **ExecutorService** : Pour gérer un pool de threads.  
+- **Synchronisation** :  
+  - Utiliser `synchronized` ou `ReentrantLock` pour éviter les accès concurrents.  
+- **Collections thread-safe** :  
+  - `ConcurrentHashMap`, `CopyOnWriteArrayList`.  
+- **Futures et Callables** :  
+  - `Callable` pour des tâches retournant un résultat.  
+  - `Future` pour récupérer le résultat de manière asynchrone.  
+
+---
+
+### **Points clés à retenir**  
+- **Spring AOP** : Idéal pour modulariser les fonctionnalités transversales.  
+- **Java Proxies** : Utile pour intercepter des méthodes sans AOP.  
+- **Concurrence** : Utiliser des outils comme `ExecutorService` et des collections thread-safe pour éviter les problèmes d'accès concurrents.  
