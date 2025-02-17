@@ -1,0 +1,34 @@
+### **Introduction aux propriétés ACID et à l'intégrité des données**  
+Les propriétés ACID garantissent la fiabilité des transactions dans une base de données.
+---
+
+### **Propriétés ACID**  
+1. **Atomicité** :  
+   Toutes les opérations d'une transaction doivent être exécutées entièrement, ou aucune ne doit l'être.  
+2. **Cohérence** :  
+   Une transaction doit toujours laisser la base de données dans un état valide, respectant ses contraintes et règles d'intégrité.  
+3. **Isolation** :  
+   Les transactions concurrentes ne doivent pas interférer entre elles, garantissant des résultats cohérents.  
+4. **Durabilité** :  
+   Une fois validée (commit), une transaction devient permanente, même en cas de panne du système.  
+
+---
+
+### **Intégrité des données**  
+Dans des systèmes critiques comme les paiements ou la gestion des stocks, il est essentiel que les opérations soient soit totalement terminées,
+soit totalement annulées (rollback) afin d'éviter des incohérences.  
+
+---
+
+### **Gestion des transactions dans Spring**  
+Spring propose différentes approches pour gérer les transactions, garantissant leur fiabilité et leur cohérence.  
+
+1. **Gestion déclarative** :  
+   L'annotation `@Transactional` permet au framework de gérer automatiquement les transactions, simplifiant ainsi le code et réduisant les risques d'erreurs.  
+2. **Gestion programmatique** :  
+   Avec des classes comme `TransactionTemplate` ou `PlatformTransactionManager`, vous pouvez gérer manuellement les transactions et leur cycle de vie pour un contrôle plus précis.  
+3. **Transactions en systèmes réactifs** :  
+   Spring prend en charge la gestion des transactions dans des environnements asynchrones (non bloquants), assurant ainsi la cohérence même en programmation réactive.  
+4. **Flexibilité** :  
+   Vous pouvez choisir entre la gestion déclarative et programmatique en fonction des besoins de votre application.  
+
